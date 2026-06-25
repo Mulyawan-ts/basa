@@ -1,7 +1,11 @@
 <script lang="ts">
-  let {label} = $props();
+  let {label,href, onclick} = $props();
 </script>
 
-<button class="btn">{label}</button>
+{#if href}
+    <a {href} class="btn">{label}</a>
+{:else}
+    <button {onclick} class="btn">{label}</button>
+{/if}
 
 <style lang="css"></style>

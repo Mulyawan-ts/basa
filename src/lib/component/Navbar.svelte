@@ -28,6 +28,6 @@
     </ul>
   </div>
   <div class="navbar-end">
-    <Button label="Login"/>
+    <Button href="\login" label="Login"/>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <!-- component toast -->
 <div class="toast toast-top toast-center">
-  <div class="alert alert-success">
-    <span>Message sent successfully.</span>
-  </div>
+	<div class="alert alert-success">
+		<span>Message sent successfully.</span>
+	</div>
 </div>

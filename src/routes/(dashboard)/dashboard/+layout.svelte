@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { Toaster } from 'svelte-sonner';
-	import DashboardNavbar from '$lib/component/dashboard/DashboardNavbar.svelte';
-	import Sidebar from '$lib/component/dashboard/Sidebar.svelte';
+	import DashboardNavbar from './DashboardNavbar.svelte';
+	import DashboardSidebar from './DashboardSidebar.svelte';
 	let { children } = $props();
 </script>
 
 <Toaster position="top-center" richColors></Toaster>
 <DashboardNavbar></DashboardNavbar>
-<Sidebar></Sidebar>
+<DashboardSidebar></DashboardSidebar>
 
 <main class="dashboard-layout">
 	{@render children()}

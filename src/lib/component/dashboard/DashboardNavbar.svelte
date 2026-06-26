@@ -18,5 +18,11 @@
 			<input type="search" required placeholder="Search" />
 		</label>
 	</div>
-	<div class="navbar-end"></div>
+</div>
+<div class="navbar-end">
+	<div class="avatar">
+		<div class="w-24 rounded-full">
+			<img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+		</div>
+	</div>
 </div>

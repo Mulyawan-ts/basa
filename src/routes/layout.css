@@ -1,3 +1,13 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
-@plugin 'daisyui';
+@plugin 'daisyui' {
+	themes: corporate --default;
+}
+
+/* configuration view transition */
+::view-transition-old(root),
+::view-transition-new(root) {
+	/* set duration */
+	animation-duration: 300ms;
+	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

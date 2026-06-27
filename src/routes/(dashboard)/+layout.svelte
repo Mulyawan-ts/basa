@@ -1,11 +1,29 @@
 <script lang="ts">
+	// import css
 	import '../layout.css';
-	import { page } from '$app/state';
+
+	// import toaster from svelte-sonner
 	import { Toaster } from 'svelte-sonner';
-	import DashboardNavbar from './dashboard/DashboardNavbar.svelte';
-	import DashboardSidebar from './dashboard/DashboardSidebar.svelte';
+
+	// import dashboard component
+	import DashboardNavbar from './DashboardNavbar.svelte';
+	import DashboardSidebar from './DashboardSidebar.svelte';
 	import DashboardBreadcrumb from './DashboardBreadcrumb.svelte';
+	import { onNavigate } from '$app/navigation';
 	let { children } = $props();
+
+	// enable view transition for dashboard
+	onNavigate((navigation) => {
+		// Check browser support view transition
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <Toaster position="top-center" richColors />

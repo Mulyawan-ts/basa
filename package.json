@@ -49,6 +49,7 @@
 		"d3-scale": "^4.0.2",
 		"flexsearch": "^0.8.212",
 		"layercake": "^10.0.2",
+		"qrcode-generator": "^2.0.4",
 		"svelte-sonner": "^1.1.1",
 		"valibot": "^1.4.2"
 	}

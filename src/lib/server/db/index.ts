@@ -3,11 +3,12 @@ import { createClient } from '@libsql/client';
 import { DATABASE_URL } from '$env/static/private';
 import * as companySchema from './schema/company';
 import * as userSchema from './schema/user';
-
+import * as adminSchema from './schema/admin';
 
 const schema = {
 	...companySchema,
-  ...userSchema
+  ...userSchema,
+  ...adminSchema,
 };
 
 // contoh: "local.db" atau "./data/basa.db"

@@ -2,6 +2,7 @@ import tailwindcss from '@tailwindcss/vite';
 import adapter from '@sveltejs/adapter-auto';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
 	plugins: [
@@ -24,6 +25,13 @@ export default defineConfig({
 					include: [...config.include, '../drizzle.config.ts']
 				})
 			}
+		}),
+		visualizer({
+			emitFile: true,
+			filename: 'stats.html',
+			open: true, // otomatis buka browser setelah build
+			gzipSize: true, // tampilkan ukuran setelah gzip (lebih akurat estimasi ukuran nyata)
+			brotliSize: true // tampilkan ukuran setelah brotli (kompresi lebih efisien, dipakai kebanyakan hosting modern)
 		})
 	]
 });
